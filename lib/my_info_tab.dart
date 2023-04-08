@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orphans/AppStrings.dart';
+import 'package:orphans/app_strings.dart';
 
 class MyInfoTab extends StatelessWidget {
   const MyInfoTab({super.key});

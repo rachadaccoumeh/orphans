@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:orphans/AppStrings.dart';
-import 'package:orphans/MyCharityTab.dart';
-import 'package:orphans/MyInfoTab.dart';
-import 'package:orphans/MyOrphansTab.dart';
+import 'package:orphans/app_strings.dart';
+import 'package:orphans/my_charity_tab.dart';
+import 'package:orphans/my_info_tab.dart';
+import 'package:orphans/my_orphans_tab.dart';
 import 'package:orphans/my_notification_tab.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: AppStrings.appTitle,
       theme: ThemeData(
         textTheme: const TextTheme(
           bodyMedium: TextStyle(
@@ -37,6 +37,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
         primarySwatch: Colors.green,
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          selectedItemColor: Colors.green,
+          unselectedItemColor: Colors.black,
+          selectedLabelStyle: TextStyle(fontFamily: 'stc', fontWeight: FontWeight.bold),
+          unselectedLabelStyle: TextStyle(fontFamily: 'stc', fontWeight: FontWeight.bold, color: Colors.black),
+        ),
       ),
       home: Directionality(
         textDirection: TextDirection.rtl,
@@ -96,6 +102,28 @@ class MyApp extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            currentIndex: 0,
+            type: BottomNavigationBarType.fixed,
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: AppStrings.home,
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.work),
+                label: AppStrings.projects,
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.credit_card),
+                label: AppStrings.bail,
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: AppStrings.myAccount,
+              ),
+            ],
           ),
         ),
       ),

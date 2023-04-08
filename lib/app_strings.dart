@@ -17,4 +17,8 @@ class AppStrings {
   static const educationBail = 'كفالة تعليمية';
   static const livingBail = 'كفالة معيشية';
   static const bailRequest = 'طلبات الكفالة';
+  static const appTitle = 'Orphans';
+  static const home = 'الرئيسية';
+  static const projects = 'مشاريع';
+  static const bail = 'كفالات';
 }
